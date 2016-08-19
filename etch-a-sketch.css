@@ -35,6 +35,6 @@ h1, h5, button {
 }
 .grid {
 	background-color: #fcfcfc;
-	border: 1px solid #e5e5e5;
 	float: left;
+	display: table-cell;
 }
