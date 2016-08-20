@@ -1,9 +1,9 @@
 
 $('document').ready(function() {
 	$('.options').on('click', function (){
-		var	number = prompt("Please enter an integer between 1 and 30 for the sketch size.");
-		while (number < 1 || number > 30) {
-			var number = prompt("To start, please enter an integer between 1 and 30.");
+		var	number = prompt("Please enter an integer between 1 and 100 for the sketch.");
+		while (number < 1 || number > 100) {
+			var number = prompt("Invalid number! Please enter an integer between 1 and 100.");
 		};
 		createGrid(number);
 	});
