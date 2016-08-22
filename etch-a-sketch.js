@@ -5,6 +5,7 @@ $('document').ready(function() {
 		while (number < 1 || number > 100) {
 			var number = prompt("Invalid number! Please enter an integer between 1 and 100.");
 		};
+		clearGrid(number);
 		createGrid(number);
 	});
 	$('#original').on('click', original);
@@ -22,28 +23,26 @@ function createGrid(number) {
 	};
 };
 
-//TODO
 function clearGrid() {
-	$('.grid').css({"background-color": "#fcfcfc"});
+	$('.grid').remove();
 };
 
 //TODO
 function original() {
-	$('.grid').css({"background-color":"#212121"});
-	var opacity = $('.grid').css("opacity", 0.1);
+	$('.grid').css({"background-color": "#263238", "opacity": 0});
 	$('.grid').on('mouseenter', function() {
-		while (opacity < 1) {
+		var opacity = $(this).css("opacity");
+		if (opacity < 1) {
 			$(this).css("opacity", opacity + 0.1);
 		};
 	});
 };
 
-//TODO
 function rOriginal() {
-	$('.grid').css({"background-color": "#263238"});
+	$('.grid').css({"background-color": "#263238", "opacity": 1});
 	$('.grid').on('mouseenter', function() {
 		var opacity = $(this).css("opacity");
-		while (opacity >= 0) {
+		if (opacity > 0) {
 			$(this).css("opacity", opacity - 0.1);
 		};
 	});
