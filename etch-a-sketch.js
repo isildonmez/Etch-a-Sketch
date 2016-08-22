@@ -31,7 +31,7 @@ function clearGrid() {
 function original() {
 	$('.grid').css({"background-color": "#263238", "opacity": 0});
 	$('.grid').on('mouseenter', function() {
-		var opacity = $(this).css("opacity");
+		var opacity = +$(this).css("opacity");
 		if (opacity < 1) {
 			$(this).css("opacity", opacity + 0.1);
 		};
