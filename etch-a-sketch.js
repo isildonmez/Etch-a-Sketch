@@ -15,7 +15,6 @@ $('document').ready(function() {
 	$('#clear').on('click', clearGrid);
 });
 
-
 function createGrid(number) {
 	var squareSize = 550 / number;
 	for(var i=0; i<number*number; i++){
@@ -27,7 +26,6 @@ function clearGrid() {
 	$('.grid').remove();
 };
 
-//TODO
 function original() {
 	$('.grid').css({"background-color": "#263238", "opacity": 0});
 	$('.grid').on('mouseenter', function() {
